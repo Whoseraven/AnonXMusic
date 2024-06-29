@@ -63,13 +63,12 @@ if __name__ == "__main__":
 
 
 import asyncio
-from pyrogram import Client
+from userbot import app
 
 async def init():
-    app = Client("my_account")
     await app.start()
     print("Bot started")
     await app.idle()  # Keeps the bot running
 
 if __name__ == "__main__":
-    asyncio.get_event_loop().run_until_complete(init())
+    asyncio.run(init())
