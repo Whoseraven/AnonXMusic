@@ -3,3 +3,27 @@ build:
     worker: Dockerfile
 run:
   worker: bash start
+  
+name: your-app-name
+regions:
+  - frankfurt
+routes:
+  - src: /
+    dest: http://your-app-name:3000
+services:
+  - name: your-app-name
+    type: web
+    description: A music bot service
+    ports:
+      - protocol: HTTP
+        port: 3000
+    image:
+      name: your-dockerhub-username/your-app-name
+      tag: latest
+    env:
+      - name: NODE_ENV
+        value: production
+    instances:
+      count: 1
+      memory: 512MB
+      
