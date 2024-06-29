@@ -173,6 +173,10 @@ class Userbot(Client):
 from pyrogram import Client
 import config
 
-app = Client("my_account", api_id=config.API_ID, api_hash=config.API_HASH)
+app = Client("my_account", 
+             api_id=config.API_ID, 
+             api_hash=config.API_HASH, 
+             bot_token=config.BOT_TOKEN)
 
-app.run()
+if __name__ == "__main__":
+    app.run()
