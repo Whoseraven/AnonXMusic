@@ -1,4 +1,4 @@
-import logging
+import bot_logging as logging
 
 logging.basicConfig(
     level=logging.INFO,
