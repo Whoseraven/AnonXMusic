@@ -14,4 +14,4 @@ commands:
     - ""  # No packaging needed for Python runtime apps
 
   start:
-    - "python3 Anonxmusic"
+    - "python3 AnonXMusic"
